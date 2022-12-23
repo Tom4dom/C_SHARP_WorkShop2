@@ -36,16 +36,29 @@
 
 
 
-int number = new Random().Next(100, 1000);
+// int number = new Random().Next(100, 1000);
 
-int firstDigit = number / 100;
-int secondDigit = number / 10 % 10;
-int thirdDigit = number % 10;
+// int firstDigit = number / 100;
+// int secondDigit = number / 10 % 10;
+// int thirdDigit = number % 10;
 
-int doubleFigure = firstDigit * 10 + thirdDigit;
+// int doubleFigure = firstDigit * 10 + thirdDigit;
 
-Console.WriteLine($"{number} -> {doubleFigure}");
-Console.WriteLine();
-Console.WriteLine(firstDigit);
-Console.WriteLine(secondDigit);
-Console.WriteLine(thirdDigit);
+// Console.WriteLine($"{number} -> {doubleFigure}");
+// Console.WriteLine();
+// Console.WriteLine(firstDigit);
+// Console.WriteLine(secondDigit);
+// Console.WriteLine(thirdDigit);
+
+
+int rnd = new Random().Next(100, 1000);
+
+int newDigit = MakeDigit(rnd);
+Console.WriteLine($"{rnd} -> {newDigit}");
+
+
+int MakeDigit(int number)
+{
+    int result = (number/100)*10 + number % 10;
+    return result;
+}
