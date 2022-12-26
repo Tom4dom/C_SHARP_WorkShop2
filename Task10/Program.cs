@@ -6,19 +6,19 @@
 // 782 -> 8
 // 918 -> 1
 
-int Method(int arg0)
+int SeconDigit(int arg0)
 {
     int result = (arg0 % 100) / 10;
     return result;
 }
 
 
-Console.WriteLine("Input a three-digit number: ");
+Console.Write("Input a three-digit number: ");
 int usrNmbr = Convert.ToInt32(Console.ReadLine());
 
-if (usrNmbr <= 999)
+if (usrNmbr <= 999 && usrNmbr >= 100 || usrNmbr >= -999 && usrNmbr <= -100)
 {
-    int secondDigit = Method(usrNmbr);
+    int secondDigit = SeconDigit(usrNmbr);
     Console.WriteLine($"{usrNmbr} -> {secondDigit}");
 }
 else
