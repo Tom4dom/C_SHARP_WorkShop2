@@ -7,13 +7,13 @@
 
 Console.Write("Input a number:  ");
 int numberA = Convert.ToInt32(Console.ReadLine());
-if (Method0(numberA))
+if (IfoutOfRange(numberA))
 {
     Console.WriteLine("there is no third digit");
 }
 else
 {
-    while (Method1(numberA))
+    while (CycleRange(numberA))
     {
         numberA = numberA / 10;
     }
@@ -22,13 +22,13 @@ else
 }
 
 
-bool Method0(int arg0)
+bool IfoutOfRange(int arg0)
 {
     return (arg0 < 100 && arg0 > -100);
 }
 
 
-bool Method1(int arg0)
+bool CycleRange(int arg0)
 {
     return arg0 > 999 || arg0 < -999;
 }
