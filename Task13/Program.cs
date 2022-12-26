@@ -9,7 +9,7 @@ Console.Write("Input a number:  ");
 int numberA = Convert.ToInt32(Console.ReadLine());
 if (IfoutOfRange(numberA))
 {
-    Console.WriteLine("there is no third digit");
+    Console.WriteLine($"{numberA} - > there is no third digit");
 }
 else
 {
@@ -18,7 +18,7 @@ else
         numberA = numberA / 10;
     }
     int ThirdDigit = numberA % 10;
-    Console.WriteLine($"{ThirdDigit}");
+    Console.WriteLine($"{numberA} -> {ThirdDigit}");
 }
 
 
