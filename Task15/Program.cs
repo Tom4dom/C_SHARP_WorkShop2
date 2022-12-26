@@ -18,7 +18,7 @@ void Method(int arg0)
     {
         Console.WriteLine("Incorrect number");
     }
-    if (arg0 >=1 && arg0 <= 5) //if (arg0 == 1 || arg0 == 2 || arg0 == 3 || arg0 == 4 || arg0 == 5)
+    if (arg0 >=1 && arg0 <= 5) /*if (arg0 == 1 || arg0 == 2 || arg0 == 3 || arg0 == 4 || arg0 == 5)*/
     {
         Console.WriteLine($"{arg0} -> no");
     }
@@ -27,3 +27,6 @@ void Method(int arg0)
         Console.WriteLine($"{arg0} -> yes");
     }
 }
+
+
+
