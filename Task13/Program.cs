@@ -5,34 +5,74 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
+Console.Write("Input a number:  ");
+int numberA = Convert.ToInt32(Console.ReadLine());
+if (Method0(numberA))
+{
+    Console.WriteLine("there is no third digit");
+}
+else
+{
+    while (Method1(numberA))
+    {
+        numberA = numberA / 10;
+    }
+    int ThirdDigit = numberA % 10;
+    Console.WriteLine($"{ThirdDigit}");
+}
 
 
-Console.Write("Input a number:  "); 
-int numberA = Convert.ToInt32(Console.ReadLine()); 
- 
-void ThirdDigit(int num) 
-{ 
-    int counter = 1; 
-    int result = num / 10; 
-    while (counter < result) 
-    { 
-        if (result < 10) 
-        { 
-            Console.WriteLine("there is no third digit"); 
-        } 
-        else if (10 * counter <= result & result < 100 * counter) 
-        { 
-            Console.WriteLine($"third digit - {num / counter % 10}"); 
-        } 
-        counter *= 10; 
-    } 
-}  
-ThirdDigit(numberA);
+bool Method0(int arg0)
+{
+    return (arg0 < 100 && arg0 > -100);
+}
+
+
+bool Method1(int arg0)
+{
+    return arg0 > 999 || arg0 < -999;
+}
 
 
 
 
 
+
+
+
+
+
+
+// Console.Write("Input a number:  ");
+// int numberA = Convert.ToInt32(Console.ReadLine());
+
+// ThirdDigit(numberA);
+
+// void ThirdDigit(int num)
+// {
+//     int counter = 0;
+//     int result = num / 10;
+//     while (counter <= result)
+//     {
+//         if (Method(numberA)) //if (result < 10) 
+//         {
+//             Console.WriteLine("there is no third digit");
+//             break;
+//         }
+//         else if (10 * counter <= result & result < 100 * counter)
+//         {
+//             Console.WriteLine($"third digit - {num / counter % 10}");
+//         }
+//         counter *= 10;
+//     }
+// }
+
+
+
+// bool Method(int arg0)
+// {
+//     return arg0 < 100;
+// }
 
 
 
@@ -100,3 +140,58 @@ ThirdDigit(numberA);
 
 
 // while (n>0) {n=n/10; index++}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// while (true)
+// {
+//     if (Method0(numberA))
+//     {
+//         Console.WriteLine("there is no third digit");
+//     }
+//     else if (Method1(numberA))
+//     {
+//         numberA = numberA / 10;
+
+//     }
+//     int ThirdDigit = numberA % 10;
+//     Console.WriteLine($"{ThirdDigit}");
+
+// }
+
+
+
+// bool Method0(int arg0)
+// {
+//     return arg0 < 100;
+// }
+
+// bool Method1(int arg0)
+// {
+//     return arg0 > 999;
+// }
