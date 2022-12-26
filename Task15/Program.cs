@@ -10,9 +10,9 @@
 Console.Write("Enter the day of the week by digit (from 1 to 7): ");
 int day = Convert.ToInt32(Console.ReadLine());
 
-Method(day);
+DayWeekNum(day);
 
-void Method(int arg0)
+void DayWeekNum(int arg0)
 {
     if (arg0 > 7 || arg0 < 1)
     {
